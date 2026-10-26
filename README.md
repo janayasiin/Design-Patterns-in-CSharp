@@ -60,7 +60,7 @@ I implemented the Decorator Pattern using a \*\*gift customization system\*\*, w
 
 \- \*\*Ribbon:\*\* Adds a decorative ribbon.
 
-\- \*\*Greeting Card:\*\* Adds a personalized card.
+\- \*\*Greeting Card:\*\* Adds a greeting card.
 
 
 
