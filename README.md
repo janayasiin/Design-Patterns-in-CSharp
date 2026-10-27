@@ -39,6 +39,26 @@ This implementation demonstrates how to combine features dynamically while follo
 
 ---
 
+### 03 — Strategy Pattern 🎮
+
+A Behavioral Design Pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+
+I implemented the Strategy Pattern using a **game character simulator**, where different characters can use different attack strategies:
+
+- **Sword Attack:** Attacks using a sword.
+- **Bow Attack:** Attacks using a bow.
+- **Magic Attack:** Attacks using magic.
+
+The application includes two characters, **Warrior** and **Archer**, each with a default attack behavior.
+
+Using `SetAttackBehavior()`, a character can change its attack strategy dynamically at runtime without modifying its class.
+
+This implementation demonstrates **encapsulating what varies**, **programming to an interface**, and favoring **composition over inheritance**.
+
+📖 **[Read the explanation and explore the code](./StrategyPattern/)**
+
+---
+
 ## 🛠️ Technologies
 
 - C#
