@@ -1,236 +1,166 @@
-\# Design Patterns in C# 💻
+# 💻 Design Patterns in C#
 
+### Learning Design Patterns Through Practical C# Projects
 
+Welcome to my Design Patterns repository! 👋
 
-This repository documents my journey of learning and implementing \*\*Design Patterns using C#\*\*.
+This repository documents my journey of learning and implementing **Design Patterns using C#**.
 
+My goal is to understand how each pattern works, what problem it solves, and how to apply it through practical examples.
 
+Each pattern has its own folder containing the **C# implementation** and a **README with a detailed explanation**.
 
-The goal is to understand how each pattern works, what problem it solves, and how to apply it through practical examples.
+---
 
+## 📚 Implemented Design Patterns
 
+| # | Design Pattern | Category | Implementation |
+|---|---|---|---|
+| 01 | 👀 Observer | Behavioral | YouTube Notification System |
+| 02 | 🎁 Decorator | Structural | Gift Customization System |
+| 03 | 🎮 Strategy | Behavioral | Game Character Simulator |
+| 04 | 🍕 Simple Factory | Creational Technique | Pizza Ordering System |
+| 05 | 🏭 Factory Method | Creational | Regional Pizza Stores |
 
-Each design pattern has its own folder containing the implementation and a README explaining the concept.
+---
 
+## 👀 01 — Observer Pattern
 
+**Category:** Behavioral Design Pattern
 
-\## 📚 Implemented Design Patterns
+The Observer Pattern allows multiple objects to be notified automatically when the state of another object changes.
 
+### 💡 Implementation
 
+A **YouTube channel notification system** demonstrating two approaches:
 
-\### 01 — Observer Pattern 👀
+- **Push Model:** The Subject sends updated data directly to its Observers.
+- **Pull Model:** Observers retrieve updated data from the Subject after receiving a notification.
 
+**Key concepts:** Subject, Observer, Push Model, Pull Model, and loose coupling.
 
+📖 **[Explore Observer Pattern →](./ObserverPattern/)**
 
-A Behavioral Design Pattern that allows multiple objects to be notified automatically when the state of another object changes.
+---
 
+## 🎁 02 — Decorator Pattern
 
+**Category:** Structural Design Pattern
 
-I implemented the Observer Pattern using a \*\*YouTube channel notification system\*\*, exploring two approaches:
+The Decorator Pattern allows additional behavior to be added to objects dynamically by wrapping them with decorators, without modifying their original classes.
 
+### 💡 Implementation
 
+A **gift customization system** where a basic teddy bear can be decorated with:
 
-\- \*\*Push Model:\*\* The Subject sends updated data directly to its Observers.
-
-\- \*\*Pull Model:\*\* Observers retrieve updated data from the Subject after receiving a notification.
-
-
-
-📖 \*\*\[Read the explanation and explore the code](./ObserverPattern/)\*\*
-
-
-
-\---
-
-
-
-\### 02 — Decorator Pattern 🎁
-
-
-
-A Structural Design Pattern that allows additional behavior to be added to objects dynamically by wrapping them with decorators, without modifying their original classes.
-
-
-
-I implemented the Decorator Pattern using a \*\*gift customization system\*\*, where a basic teddy bear can be decorated with optional additions:
-
-
-
-\- \*\*Gift Wrapping:\*\* Adds wrapping to the gift.
-
-\- \*\*Ribbon:\*\* Adds a decorative ribbon.
-
-\- \*\*Greeting Card:\*\* Adds a greeting card.
-
-
+- 🎀 **Gift Wrapping:** Adds wrapping to the gift.
+- 🎗️ **Ribbon:** Adds a decorative ribbon.
+- 💌 **Greeting Card:** Adds a greeting card.
 
 Each decorator wraps the previous object and adds its own cost and description.
 
+**Key concepts:** Open-Closed Principle, dynamic behavior extension, and composition over inheritance.
 
+📖 **[Explore Decorator Pattern →](./DecoratorPattern/)**
 
-This implementation demonstrates how to combine features dynamically while following the \*\*Open-Closed Principle\*\* and favoring \*\*composition over inheritance\*\*.
+---
 
+## 🎮 03 — Strategy Pattern
 
+**Category:** Behavioral Design Pattern
 
-📖 \*\*\[Read the explanation and explore the code](./DecoratorPattern/)\*\*
+The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
 
+### 💡 Implementation
 
+A **game character simulator** with different attack strategies:
 
-\---
+- ⚔️ **Sword Attack:** Attacks using a sword.
+- 🏹 **Bow Attack:** Attacks using a bow.
+- ✨ **Magic Attack:** Attacks using magic.
 
+The application includes two characters, **Warrior** and **Archer**, each with a default attack behavior.
 
+Using `SetAttackBehavior()`, a character can change its attack strategy dynamically at runtime.
 
-\### 03 — Strategy Pattern 🎮
+**Key concepts:** Programming to an interface, encapsulating what varies, and composition over inheritance.
 
+📖 **[Explore Strategy Pattern →](./StrategyPattern/)**
 
+---
 
-A Behavioral Design Pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+## 🍕 04 — Simple Factory Pattern
 
+**Category:** Creational Technique
 
+Simple Factory encapsulates object creation in a separate factory class, allowing clients to request objects without directly instantiating concrete classes.
 
-I implemented the Strategy Pattern using a \*\*game character simulator\*\*, where different characters can use different attack strategies:
+### 💡 Implementation
 
+A **pizza ordering system** supporting:
 
+- 🧀 **Cheese Pizza:** Created using `CheesePizza`.
+- 🥦 **Veggie Pizza:** Created using `VeggiePizza`.
 
-\- \*\*Sword Attack:\*\* Attacks using a sword.
-
-\- \*\*Bow Attack:\*\* Attacks using a bow.
-
-\- \*\*Magic Attack:\*\* Attacks using magic.
-
-
-
-The application includes two characters, \*\*Warrior\*\* and \*\*Archer\*\*, each with a default attack behavior.
-
-
-
-Using `SetAttackBehavior()`, a character can change its attack strategy dynamically at runtime without modifying its class.
-
-
-
-This implementation demonstrates \*\*encapsulating what varies\*\*, \*\*programming to an interface\*\*, and favoring \*\*composition over inheritance\*\*.
-
-
-
-📖 \*\*\[Read the explanation and explore the code](./StrategyPattern/)\*\*
-
-
-
-\---
-
-
-
-\### 04 — Simple Factory Pattern 🍕
-
-
-
-A creational technique that encapsulates object creation in a separate factory class, allowing clients to request objects without directly instantiating concrete classes.
-
-
-
-I implemented Simple Factory using a \*\*pizza ordering system\*\*, where customers can order different types of pizza:
-
-
-
-\- \*\*Cheese Pizza:\*\* Created using `CheesePizza`.
-
-\- \*\*Veggie Pizza:\*\* Created using `VeggiePizza`.
-
-
-
-The `SimplePizzaFactory` class is responsible for creating the appropriate pizza based on the requested type.
-
-
+The `SimplePizzaFactory` class creates the appropriate pizza based on the requested type.
 
 The `PizzaStore` class receives the factory through its constructor and uses it to create, prepare, bake, cut, and box pizzas.
 
+**Key concepts:** Object creation, composition, separation of responsibilities, and programming to abstractions.
 
+📖 **[Explore Simple Factory Pattern →](./SimpleFactoryPattern/)**
 
-This implementation demonstrates \*\*encapsulation of object creation\*\*, \*\*separation of responsibilities\*\*, \*\*composition\*\*, and \*\*programming to abstractions\*\*.
+---
 
+## 🏭 05 — Factory Method Pattern
 
+**Category:** Creational Design Pattern
 
-📖 \*\*\[Read the explanation and explore the code](./SimpleFactoryPattern/)\*\*
+The Factory Method Pattern defines a method for creating objects while allowing subclasses to decide which concrete class to instantiate.
 
+### 💡 Implementation
 
+A **pizza ordering system with regional pizza stores**:
 
-\---
+- 🗽 **New York Pizza Store:** Creates New York-style cheese pizza.
+- 🍕 **Chicago Pizza Store:** Creates Chicago-style cheese pizza with square slices.
 
+The abstract `PizzaStore` class defines the factory method `CreatePizza()` and implements the shared `OrderPizza()` process.
 
+Each concrete store overrides `CreatePizza()`:
 
-\### 05 — Factory Method Pattern 🏭
+- `NYPizzaStore` creates `NYCheesePizza`.
+- `ChicagoPizzaStore` creates `ChicagoCheesePizza`.
 
+**Key concepts:** Inheritance, method overriding, runtime polymorphism, object creation, and Dependency Inversion Principle.
 
+📖 **[Explore Factory Method Pattern →](./FactoryMethodPattern/)**
 
-A Creational Design Pattern that defines a method for creating objects while allowing subclasses to decide which concrete class to instantiate.
+---
 
+## 🔍 Simple Factory vs. Factory Method
 
+| Feature | Simple Factory | Factory Method |
+|---|---|---|
+| Object creation | Separate factory class | Factory method in subclasses |
+| Main approach | Composition | Inheritance |
+| Who creates the product? | `SimplePizzaFactory` | Concrete pizza stores |
+| Example | `CheesePizza`, `VeggiePizza` | `NYCheesePizza`, `ChicagoCheesePizza` |
 
-I implemented the Factory Method Pattern using a \*\*pizza ordering system with different regional stores\*\*:
+---
 
+## 🛠️ Technologies & Tools
 
+- **Language:** C#
+- **Framework:** .NET
+- **IDE:** Visual Studio
+- **Version Control:** Git
+- **Repository Hosting:** GitHub
 
-\- \*\*New York Pizza Store:\*\* Creates New York-style cheese pizza.
+---
 
-\- \*\*Chicago Pizza Store:\*\* Creates Chicago-style cheese pizza with square slices.
+## 🎯 Learning Goal
 
-
-
-The abstract `PizzaStore` class defines the factory method `CreatePizza()` and provides a shared `OrderPizza()` process.
-
-
-
-Each concrete store overrides `CreatePizza()` to instantiate its corresponding pizza type:
-
-
-
-\- `NYPizzaStore` creates `NYCheesePizza`.
-
-\- `ChicagoPizzaStore` creates `ChicagoCheesePizza`.
-
-
-
-This implementation demonstrates \*\*inheritance\*\*, \*\*method overriding\*\*, \*\*runtime polymorphism\*\*, \*\*encapsulation of object creation\*\*, and the \*\*Dependency Inversion Principle\*\*.
-
-
-
-Unlike Simple Factory, which uses a separate factory object, Factory Method delegates object creation to subclasses through inheritance.
-
-
-
-📖 \*\*\[Read the explanation and explore the code](./FactoryMethodPattern/)\*\*
-
-
-
-\---
-
-
-
-\## 🛠️ Technologies
-
-
-
-\- C#
-
-\- .NET
-
-\- Visual Studio
-
-\- Git \& GitHub
-
-
-
-\---
-
-
-
-\## 🎯 Learning Goal
-
-
-
-My goal is to build a deeper understanding of software design by implementing patterns myself instead of only studying their theory.
-
-
+My goal is to build a deeper understanding of software design by **implementing patterns myself instead of only studying their theory**.
 
 This repository will continue to grow as I learn and practice more Design Patterns. 🚀
-
